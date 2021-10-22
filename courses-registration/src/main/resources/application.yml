@@ -1,2 +1,11 @@
+spring:
+  application:
+    name: courses-registration
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
 server:
   port: 8080
