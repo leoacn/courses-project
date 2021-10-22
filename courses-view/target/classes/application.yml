@@ -7,12 +7,5 @@ spring:
 ---
 spring:
   profiles: dev
-  webflux:
-    static-path-pattern: /content/**
-  web:
-    resources:
-      static-location: classpath:/files/,classpath:/static-files
-  mvc:
-    static-path-pattern: /content/**
 server:
   port: 3000

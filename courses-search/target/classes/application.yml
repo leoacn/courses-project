@@ -1,2 +1,11 @@
+spring:
+  application:
+    name: courses-search
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
 server:
   port: 9090
