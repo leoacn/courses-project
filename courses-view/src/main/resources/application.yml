@@ -3,6 +3,8 @@ spring:
     name: courses-view
   profiles:
     active: dev
+  thymeleaf:
+    cache: false
 
 ---
 spring:
