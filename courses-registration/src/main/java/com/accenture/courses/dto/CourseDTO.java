@@ -1,13 +1,7 @@
-package com.accenture.courses.model;
-import org.springframework.data.annotation.Id;
+package com.accenture.courses.dto;
 
-import java.io.Serializable;
-
-public class Course implements Serializable {
-
-    @Id
+public class CourseDTO {
     private Integer id;
-
     private String name;
 
     public Integer getId() {

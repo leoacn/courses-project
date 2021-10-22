@@ -1,7 +1,9 @@
 package com.accenture.courses.rest;
 
+import com.accenture.courses.dto.CourseDTO;
 import com.accenture.courses.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +22,7 @@ public class CoursesRegistrationActions {
     }
 
     @PostMapping
-    public ResponseEntity<?> registerCourse(@RequestParam String courseName) {
-        courseService.saveCourse(courseName);
-        return ResponseEntity.ok("{ id:1, name:'" + courseName + "' }");
+    public ResponseEntity<CourseDTO> registerCourse(@RequestParam String courseName) {
+        return new ResponseEntity<>(courseService.saveCourse(courseName), HttpStatus.OK);
     }
 }

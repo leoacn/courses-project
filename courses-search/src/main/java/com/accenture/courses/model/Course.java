@@ -1,4 +1,5 @@
 package com.accenture.courses.model;
+
 import org.springframework.data.annotation.Id;
 
 import java.io.Serializable;
