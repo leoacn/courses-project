@@ -11,6 +11,7 @@ import org.springframework.web.client.HttpClientErrorException;
 @RequestMapping("/courses")
 public class CoursesSearchActions {
 
+
     @GetMapping(path = "/{id}")
     public ResponseEntity<?> getCourse(@PathVariable("id") final int id){
        if(id==1)
@@ -18,4 +19,6 @@ public class CoursesSearchActions {
        else
            return ResponseEntity.notFound().build();
     }
+
+
 }

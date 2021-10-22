@@ -30,13 +30,13 @@ mvn clean spring-boot:run -pl courses-search
 mvn clean spring-boot:run -pl courses-view
 ```
 
-### Build & register docker images (pending)
+### Build & register docker images 
 
 ```shell
 mvn clean package spring-boot:build-image
 ```
 
-### Run with Docker-compose (pending)
+### Run with Docker-compose 
 
 ```shell
 docker-compose up -d
