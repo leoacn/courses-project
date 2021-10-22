@@ -15,7 +15,7 @@ services:
       links:
         - mongodb
       networks:
-        - local
+        - backend
       environment:
         - "spring.profiles.active=dev"
 
@@ -26,7 +26,7 @@ services:
       links:
         - mongodb
       networks:
-        - local
+        - backend
       environment:
         - "spring.profiles.active=dev"
 
@@ -38,12 +38,12 @@ services:
         - courses-search
         - courses-registration
       networks:
-        - local
+        - backend
       environment:
         - "spring.profiles.active=dev"
 
-    networks:
-      local:
+  networks:
+    backend:
 
 
 
