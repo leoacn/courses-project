@@ -1,4 +1,4 @@
-package rest;
+package com.accenture.courses.rest;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,8 +12,8 @@ public class CoursesRegistrationActions {
 
     @GetMapping(path = "/{id}")
     public ResponseEntity<?> getCourse(@PathVariable("id") final int id){
-       if(id==1)
-        return ResponseEntity.ok("{ id:1, name:'Spring boot Microservices' }");
+       if(id==2)
+        return ResponseEntity.ok("{ id:2, name:'Spring boot Microservices' }");
        else
            return ResponseEntity.notFound().build();
     }
