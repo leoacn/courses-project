@@ -1,5 +1,4 @@
-version: "3"
-
+version: '3'
 services:
     mongodb:
       image: mongo:3.2.4
@@ -7,7 +6,6 @@ services:
       ports:
         - 27017:27017
       command: --smallfiles
-
     courses-search:
       image: acn/courses-search
       ports:
@@ -18,7 +16,6 @@ services:
         - backend
       environment:
         - "spring.profiles.active=dev"
-
     courses-registration:
       image: acn/courses-registration
       ports:
@@ -29,7 +26,6 @@ services:
         - backend
       environment:
         - "spring.profiles.active=dev"
-
     courses-view:
       image: acn/courses-registration
       ports:
@@ -41,9 +37,8 @@ services:
         - backend
       environment:
         - "spring.profiles.active=dev"
-
-  networks:
-    backend:
+networks:
+  backend:
 
 
 
