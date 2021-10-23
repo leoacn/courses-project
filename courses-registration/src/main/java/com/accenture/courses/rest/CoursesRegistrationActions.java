@@ -12,16 +12,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/courses")
 public class CoursesRegistrationActions {
 
-    private final CourseService courseService;
+  // private final CourseService courseService;
 
+    /*
     @Autowired
     public CoursesRegistrationActions(final CourseService courseService) {
         this.courseService = courseService;
     }
+     */
+
 
     @PostMapping
     public ResponseEntity<?> registerCourse(@RequestParam String courseName) {
-        courseService.saveCourse(courseName);
+        //courseService.saveCourse(courseName);
         return ResponseEntity.ok("{ id:1, name:'" + courseName + "' }");
     }
 }

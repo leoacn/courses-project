@@ -1,4 +1,6 @@
-C:\Users\risko\git\courses-project\courses-registration\src\main\java\com\accenture\courses\CoursesRegistrationApp.java
-C:\Users\risko\git\courses-project\courses-registration\src\main\java\com\accenture\courses\request\Course.java
-C:\Users\risko\git\courses-project\courses-registration\src\main\java\com\accenture\courses\service\CourseService.java
-C:\Users\risko\git\courses-project\courses-registration\src\main\java\com\accenture\courses\rest\CoursesRegistrationActions.java
+C:\Users\leonardo.guzman\projects\courses-project\courses-registration\src\main\java\com\accenture\courses\service\CourseService.java
+C:\Users\leonardo.guzman\projects\courses-project\courses-registration\src\main\java\com\accenture\courses\repository\CourseRepository.java
+C:\Users\leonardo.guzman\projects\courses-project\courses-registration\src\main\java\com\accenture\courses\service\impl\CourseServiceImpl.java
+C:\Users\leonardo.guzman\projects\courses-project\courses-registration\src\main\java\com\accenture\courses\CoursesRegistrationApp.java
+C:\Users\leonardo.guzman\projects\courses-project\courses-registration\src\main\java\com\accenture\courses\rest\CoursesRegistrationActions.java
+C:\Users\leonardo.guzman\projects\courses-project\courses-registration\src\main\java\com\accenture\courses\model\Course.java

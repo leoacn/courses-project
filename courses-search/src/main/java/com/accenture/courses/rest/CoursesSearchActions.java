@@ -35,7 +35,7 @@ public class CoursesSearchActions {
         List<CourseDTO> courses = new ArrayList<>();
         courses.add(courseDTO1);
         courses.add(courseDTO2);
-        return new ResponseEntity<>(courses, HttpStatus.OK);
+        return new ResponseEntity<List<CourseDTO>>(courses, HttpStatus.OK);
     }
 
 }
