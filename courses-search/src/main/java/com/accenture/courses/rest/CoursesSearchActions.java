@@ -35,8 +35,22 @@ public class CoursesSearchActions {
     }
 
     @GetMapping(path = "/")
+<<<<<<< HEAD
+    public ResponseEntity<List<CourseDTO>> getAllCourses(){
+        CourseDTO courseDTO1 = new CourseDTO();
+        courseDTO1.setId(1);
+        courseDTO1.setName("Dummy course");
+        CourseDTO courseDTO2 = new CourseDTO();
+        courseDTO2.setId(2);
+        courseDTO2.setName("Foo course");
+        List<CourseDTO> courses = new ArrayList<>();
+        courses.add(courseDTO1);
+        courses.add(courseDTO2);
+        return new ResponseEntity<List<CourseDTO>>(courses, HttpStatus.OK);
+=======
     public ResponseEntity<List<CourseDTO>> getAllCourses() {
         return new ResponseEntity<>(courseService.getAllCourses(), HttpStatus.OK);
+>>>>>>> main
     }
 
 }

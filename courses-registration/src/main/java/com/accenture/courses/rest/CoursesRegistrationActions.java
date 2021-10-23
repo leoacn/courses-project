@@ -14,15 +14,24 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/courses")
 public class CoursesRegistrationActions {
 
-    private final CourseService courseService;
+  // private final CourseService courseService;
 
+    /*
     @Autowired
     public CoursesRegistrationActions(final CourseService courseService) {
         this.courseService = courseService;
     }
+     */
+
 
     @PostMapping
+<<<<<<< HEAD
+    public ResponseEntity<?> registerCourse(@RequestParam String courseName) {
+        //courseService.saveCourse(courseName);
+        return ResponseEntity.ok("{ id:1, name:'" + courseName + "' }");
+=======
     public ResponseEntity<CourseDTO> registerCourse(@RequestParam String courseName) {
         return new ResponseEntity<>(courseService.saveCourse(courseName), HttpStatus.OK);
+>>>>>>> main
     }
 }
