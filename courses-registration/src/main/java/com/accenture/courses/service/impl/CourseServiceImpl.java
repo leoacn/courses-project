@@ -1,5 +1,6 @@
 package com.accenture.courses.service.impl;
 
+import com.accenture.courses.dto.CourseDTO;
 import com.accenture.courses.model.Course;
 import com.accenture.courses.repository.CourseRepository;
 import com.accenture.courses.service.CourseService;
@@ -18,12 +19,19 @@ public final class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public void saveCourse(String courseName) {
+    public CourseDTO saveCourse(String courseName) {
         if(Strings.isBlank(courseName)) {
             throw new IllegalArgumentException("Course name cannot be blank");
         }
         Course course = new Course();
         course.setName(courseName);
-        courseRepository.save(course);
+
+        Course response = courseRepository.save(course);
+
+        CourseDTO courseDTO = new CourseDTO();
+        courseDTO.setId(response.getId());
+        courseDTO.setName(response.getName());
+
+        return courseDTO;
     }
 }
