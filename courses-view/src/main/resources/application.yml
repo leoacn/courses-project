@@ -1,11 +1,5 @@
 spring:
   application:
     name: courses-view
-  profiles:
-    active: dev
-
----
-spring:
-  profiles: dev
 server:
   port: 3000

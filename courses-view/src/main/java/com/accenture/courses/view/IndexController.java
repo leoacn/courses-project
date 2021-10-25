@@ -1,6 +1,6 @@
 package com.accenture.courses.view;
 
-import com.accenture.courses.dto.CourseDTO;
+import com.accenture.courses.view.model.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
@@ -27,10 +27,10 @@ public class IndexController {
     @GetMapping("/")
     public String index(Model model) {
 
-        List<CourseDTO> dtos=Arrays.asList(
-        restTemplate.getForObject("http://localhost:9090/courses/", CourseDTO[].class));
+        List<Course> courseList=Arrays.asList(
+        restTemplate.getForObject("http://localhost:9090/courses/", Course[].class));
 
-        ArrayList<CourseDTO> courses=new ArrayList<>(dtos);
+        ArrayList<Course> courses=new ArrayList<>(courseList);
 
         model.addAttribute("courses", courses);
 

@@ -1,7 +1,7 @@
 package com.accenture.courses.service;
 
-import com.accenture.courses.dto.CourseDTO;
+import com.accenture.courses.registration.model.Course;
 
 public interface CourseService {
-    CourseDTO saveCourse(String courseName);
+    Course saveCourse(Course course);
 }
