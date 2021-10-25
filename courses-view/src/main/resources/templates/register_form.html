@@ -13,13 +13,13 @@
 
 <form class="form-group" action="#" th:action="@{/register}" method="POST" th:object="${course}">
     <label class="form-label">Course name:</label>
-    <input size="10" class="form-control input-sm" type="text" th:field="*{name}"/>
+    <input class="form-control input-sm text-input" type="text" th:field="*{name}"/>
 
     <label class="form-label">Details:</label>
-    <input size="10" class="form-control input-sm" type="text" th:field="*{details}"/>
+    <input size="10" class="form-control input-sm text-input" type="text" th:field="*{details}"/>
 
     <label class="form-label">Duration (hrs):</label>
-    <input size="10" class="form-control input-sm" type="number" th:field="*{name}"/>
+    <input size="10" class="form-control input-sm text-input" type="number" th:field="*{name}"/>
     <br/>
     <button class="btn btn-primary mb-3" type="submit">Register</button>
 </form>

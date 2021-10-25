@@ -4,3 +4,8 @@ body {
     /*Para la barra inferior fija*/
     padding-bottom: 70px;
 }
+
+.text-input {
+  /*width: 200px;*/
+  width: 46%;
+}
