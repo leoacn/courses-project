@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="master">
+<head>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/fa.min.css}" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+<main layout:fragment="contenido">
+    <div class="col-12">
+        <h2>Agregar Curso</h2>
+        <form  method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre Curso</label>
+                <input autocomplete="off" autofocus  id="nombre"
+                       placeholder="Escribe el nombre del curso" type="text"
+                       class="form-control" >
+                <div class="invalid-feedback" ></div>
+            </div>
+            <br/>
+            <button class="btn btn-success" type="submit">Guardar</button>
+        </form>
+    </div>
+</main>
+</body>
+</html>
