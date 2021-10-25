@@ -1,6 +1,6 @@
 package com.accenture.courses.view;
 
-import com.accenture.courses.dto.CourseDTO;
+import com.accenture.courses.view.model.CourseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;

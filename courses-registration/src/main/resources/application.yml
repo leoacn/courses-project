@@ -1,11 +1,8 @@
 spring:
   application:
-    name: courses-registration
-  profiles:
-    active: dev
-
----
-spring:
-  profiles: dev
+    name: courses-search
+  data:
+    mongodb:
+      database: coursesdb
 server:
   port: 8080

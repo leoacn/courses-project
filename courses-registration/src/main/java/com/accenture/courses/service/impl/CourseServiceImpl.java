@@ -1,8 +1,8 @@
 package com.accenture.courses.service.impl;
 
-import com.accenture.courses.dto.CourseDTO;
-import com.accenture.courses.model.Course;
-import com.accenture.courses.repository.CourseRepository;
+import com.accenture.courses.registration.dto.CourseDTO;
+import com.accenture.courses.registration.model.Course;
+import com.accenture.courses.registration.repository.CourseRepository;
 import com.accenture.courses.service.CourseService;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,19 +19,16 @@ public final class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public CourseDTO saveCourse(String courseName) {
-        if(Strings.isBlank(courseName)) {
+    public Course saveCourse(Course course) {
+
+        if(Strings.isBlank(course.getName())) {
             throw new IllegalArgumentException("Course name cannot be blank");
         }
-        Course course = new Course();
-        course.setName(courseName);
 
-        Course response = courseRepository.save(course);
+        CourseDTO dto=CourseDTO.create(course.getId(),course.getName(),course.getDetails(),course.getDuration());
 
-        CourseDTO courseDTO = new CourseDTO();
-        courseDTO.setId(response.getId());
-        courseDTO.setName(response.getName());
+        CourseDTO resp = courseRepository.save(dto);
 
-        return courseDTO;
+        return Course.create(resp.getId(),resp.getName(),resp.getDetails(),resp.getDuration());
     }
 }

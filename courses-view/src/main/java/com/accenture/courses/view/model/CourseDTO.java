@@ -1,6 +1,8 @@
-package com.accenture.courses.dto;
+package com.accenture.courses.view.model;
 
-public class CourseDTO {
+import java.io.Serializable;
+
+public class CourseDTO implements Serializable {
     private Integer id;
     private String name;
 

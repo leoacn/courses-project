@@ -7,5 +7,9 @@ spring:
 ---
 spring:
   profiles: dev
+  mongodb:
+    database: coursesdb
+    port: 27017
+    host: localhost
 server:
   port: 3000
