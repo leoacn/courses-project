@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Courses Registration</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/fa.min.css}" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 <body>
 <h1>Courses Registration</h1>
 
-<form action="#" th:action="@{/register}" method="POST" th:object="${course}">
-    <label>Course name:</label>
-    <input type="text" th:field="*{name}"/>
 
-    <label>Details:</label>
-    <input type="text" th:field="*{details}"/>
+<form class="form-group" action="#" th:action="@{/register}" method="POST" th:object="${course}">
+    <label class="form-label">Course name:</label>
+    <input size="10" class="form-control input-sm" type="text" th:field="*{name}"/>
 
-    <label>Duration (hrs):</label>
-    <input type="number" th:field="*{name}"/>
+    <label class="form-label">Details:</label>
+    <input size="10" class="form-control input-sm" type="text" th:field="*{details}"/>
 
-    <button type="submit">Register</button>
+    <label class="form-label">Duration (hrs):</label>
+    <input size="10" class="form-control input-sm" type="number" th:field="*{name}"/>
+    <br/>
+    <button class="btn btn-primary mb-3" type="submit">Register</button>
 </form>
+
 
 </body>
 </html>
