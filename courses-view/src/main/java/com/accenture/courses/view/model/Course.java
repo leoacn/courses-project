@@ -11,7 +11,10 @@ public  class Course {
 
     private float duration;
 
-    private Course(String id, String name, String details, float duration){
+    public Course(){
+    }
+
+    public Course(String id, String name, String details, float duration){
               this.id=id;
               this.name=name;
               this.details=details;

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses Registration</title>
+</head>
+<body>
+<h1>Courses Registration</h1>
+
+<form action="#" th:action="@{/register}" method="POST" th:object="${course}">
+    <label>Course name:</label>
+    <input type="text" th:field="*{name}"/>
+
+    <label>Details:</label>
+    <input type="text" th:field="*{details}"/>
+
+    <label>Duration (hrs):</label>
+    <input type="number" th:field="*{name}"/>
+
+    <button type="submit">Register</button>
+</form>
+
+</body>
+</html>
